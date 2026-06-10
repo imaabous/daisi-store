@@ -46,9 +46,9 @@ export default function Home() {
                 <p className="text-gray-400 text-sm mb-4">{product.desc}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-bold">{product.price}</span>
-                  <button className="bg-cyan-400 text-black text-sm font-bold px-4 py-2 hover:bg-cyan-300 transition">
-                    Buy Now
-                  </button>
+                 <a href="https://discord.gg/DJcN9XJf" target="_blank" className="bg-cyan-400 text-black text-sm font-bold px-4 py-2 hover:bg-cyan-300 transition">
+  Buy Now
+</a>
                 </div>
               </div>
             ))}
