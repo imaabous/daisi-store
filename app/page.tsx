@@ -34,21 +34,19 @@ export default function Home() {
           <h3 className="text-3xl font-bold mb-10">Our Products</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "CalliVibe", price: "RM 80.00", desc: "Ultra realistic reshade for FiveM" },
-              { name: "SummerTime", price: "RM 50.00", desc: "Cinematic color grading mod pack" },
-              { name: "Filmic TopBoy", price: "RM 18.00", desc: "Enhanced night visuals for roleplay" },
+              { name: "CalliVibe", price: "RM 80.00", desc: "Ultra realistic reshade for FiveM", image: "callivibe.png" },
+              { name: "SummerTime", price: "RM 50.00", desc: "Cinematic color grading mod pack", image: "summertime.png" },
+              { name: "Filmic TopBoy", price: "RM 18.00", desc: "Enhanced night visuals for roleplay", image: "topboy.png" },
             ].map((product, i) => (
               <div key={i} className="border border-gray-800 bg-gray-900 p-6 hover:border-cyan-400 transition">
-                <div className="bg-gray-800 h-40 mb-4 flex items-center justify-center text-gray-600">
-                  [ Preview Image ]
-                </div>
+                <img src={`/images/${product.image}`} alt={product.name} className="w-full h-40 object-cover mb-4" />
                 <h4 className="text-lg font-bold mb-1">{product.name}</h4>
                 <p className="text-gray-400 text-sm mb-4">{product.desc}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-bold">{product.price}</span>
-                 <a href="https://discord.gg/DJcN9XJf" target="_blank" className="bg-cyan-400 text-black text-sm font-bold px-4 py-2 hover:bg-cyan-300 transition">
-  Buy Now
-</a>
+                  <a href="https://discord.gg/DJcN9XJf" target="_blank" className="bg-cyan-400 text-black text-sm font-bold px-4 py-2 hover:bg-cyan-300 transition">
+                    Buy Now
+                  </a>
                 </div>
               </div>
             ))}
